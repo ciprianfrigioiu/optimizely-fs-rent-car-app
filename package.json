@@ -1,0 +1,22 @@
+{
+	"name": "optimizely-fs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ciprianfrigioiu/optimizely-fs-rent-car-app.git"
+	},
+	"author": "Ciprian Frigioiu",
+	"license": "ISC",
+	"dependencies": {
+		"@optimizely/optimizely-sdk": "^3.0.1",
+		"prompt-input": "^3.0.0",
+		"request": "^2.88.0",
+		"request-promise": "^4.2.4",
+		"uuid": "^3.3.2"
+	}
+}
