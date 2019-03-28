@@ -1,4 +1,6 @@
 # Optimizely Full Stack Assessment
+
+## Installation instructions
 Run `npm install` in the console, then run the app using `node index.js`. To enable the development environment use the `node index.js preproduction` command instead. The development environment includes debugging information.
 
 ## Description
