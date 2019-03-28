@@ -16,6 +16,7 @@ const options = {
 	json: true
 };
 
+// Get user ID and campaign source
 var userId = uuidv();
 var userSources = ['campaign_classic_car_enthusiasts', 'campaign_man_and_van', 'direct'];
 
@@ -104,7 +105,7 @@ requestPromise(options).then(function (datafile) {
 				}
 			];
 
-			// Feature flag
+			// Classic car feature
 			var enabled = optimizelyClientInstance.isFeatureEnabled('classic_car', userId, userAttributes);
 			var name = optimizelyClientInstance.getFeatureVariableString('classic_car', 'name', userId);
 			var price = optimizelyClientInstance.getFeatureVariableInteger('classic_car', 'price', userId);
@@ -149,6 +150,7 @@ requestPromise(options).then(function (datafile) {
 						var variation;
 						var forcedVariationKey; // Use "upsell_roadside_protection" for variation 1, "upsell_navigation_system" for variation 2 or leave empty to activate the experiment normally
 
+						// Determine if the variation should be forced or not
 						if (typeof forcedVariationKey !== 'undefined') {
 							if (optimizelyClientInstance.setForcedVariation('extras_upsell', userId, forcedVariationKey)) {
 								variation = optimizelyClientInstance.getForcedVariation('extras_upsell', userId);
@@ -157,6 +159,7 @@ requestPromise(options).then(function (datafile) {
 							variation = optimizelyClientInstance.activate('extras_upsell', userId, userAttributes);
 						}
 
+						// Variations logic
 						if (variation === 'upsell_roadside_protection') {
 							// Variation 1
 							if (environment === 'preproduction') {
