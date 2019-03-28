@@ -1,7 +1,7 @@
 {
-	"name": "optimizely-fs",
+	"name": "optimizely-fs-rent-car-app",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Rent-a-Car App",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
